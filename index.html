@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;500;700&display=swap" rel="stylesheet">
+    <title> Lp - Form </title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="form-body">
+    <h1 id="presentation__title"> Cadastro de Autores </h1>
+    
+    <form action="">
+        <fieldset>
+            <label for="name"> Nome: </label>
+            <input required type="text" name="name" id="name">
+
+            <label for="surname"> Sobrenome: </label>
+            <input required type="text" name="surname" id="surname">
+
+            <div class="radios">
+                <label>
+                    <input required type="radio" name="genre" value="masculine"> Masculino
+                </label>
+                <label>
+                    <input type="radio" name="genre" value="feminine"> Feminino
+                </label>
+                <label>
+                    <input type="radio" name="genre" value="N/A"> Prefiro não falar
+                </label>
+            </div>
+        </fieldset>       
+        <fieldset>
+            <label for="email"> Email: </label>
+            <input type="email" name="email" id="email">
+
+            <label for="tel"> Número celular: </label>
+            <input type="tel" pattern="[0-9{2}-0-9{4}0-9]" name="phone" placeholder="42 9999 9999" id="phone" maxlength="10" minlength="10">
+        </fieldset>
+        <div class="interests">
+            <label for="interests"> Qual desses livros você gostou mais? </label>
+            <select required name="interests" id="interests">
+                <option value="" selected disabled> Selecinar </option>
+                <option value="O Grande Rei"> O Grande Rei </option>
+                <option value="Dom Cabote"> Dom Cabote </option>
+                <option value="O Senhor dos Pasteis"> O Senhor dos Pastéis </option>
+                <option value="A Humana Risada"> A Humana Risada </option>
+                <option value="A Leoa o Mago e o Cesto"> A Leoa, o Mago e o Cesto </option>
+                <option value="Sarah no estado da decadencia"> Sarah, no estado da decadência </option>
+                <option value="N/A"> Nenhuma Alternativa </option>
+            </select>
+        
+            <h2 class="title"> Quais desses gêneros você possui interesse? </h2>
+            <div class="checkboxes">
+                <input type="checkbox" name="genre1" id="genre1" value="romance">
+                <label for="genre1"> Romance </label>
+                <input type="checkbox" name="genre2" id="genre2" value="aventura">
+                <label for="genre2"> Aventura </label>
+                <input type="checkbox" name="genre3" id="genre3" value="fantasia">
+                <label for="genre3"> Fantasia </label>
+                <input type="checkbox" name="genre4" id="genre4" value="ficção">
+                <label for="genre4"> Ficção </label>
+                <input type="checkbox" name="genre5" id="genre5" value="distopia">
+                <label for="genre5"> Distopia </label>
+                <input type="checkbox" name="genre6" id="genre6" value="poesia">
+                <label for="genre6"> Poesia </label>
+                <input type="checkbox" name="genre7" id="genre7" value="misterio">
+                <label for="genre7"> Mistério </label>
+            </div>
+        </div>
+
+        <div class="personality">
+            <h2 class="title"> Conte mais sobre você </h2>
+            <textarea name="about" id="about">  </textarea>
+        </div>
+
+        <button id="button"> Enviar </button>
+    </form>
+    </div>
+    </main>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
