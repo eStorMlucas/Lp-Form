@@ -1,0 +1,18 @@
+@import url(phone.css);
+@import url(form-input.css);
+@import url(form-genre.css);
+
+.form__data {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-left: 5px;
+  width: 240px;
+}
+
+.form__data label {
+  font-size: 1.2rem; 
+  margin-right: .5rem;
+  margin-top: .2rem;
+}

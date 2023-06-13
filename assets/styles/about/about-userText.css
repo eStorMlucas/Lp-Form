@@ -1,0 +1,5 @@
+#userText {
+  background: var(--textarea);
+  height: 90px;
+  width: 200px;
+}

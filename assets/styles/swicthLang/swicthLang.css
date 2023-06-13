@@ -1,0 +1,22 @@
+@import url(swicthLang-text.css);
+
+.swicthLang {
+  background: var(--formBody);
+  border: none;
+  height: 22px;
+  margin-top: 20px;
+  width: 70px;
+}
+
+.swicthLang::after {
+  background: var(--buttonAndFormBorder);
+  border-radius: 10px;
+  bottom: 17px;
+  content: '';
+  display: block;
+  height: 25px;
+  position: relative;
+  right: 7px;
+  width: 72px;
+  z-index: -1;
+}

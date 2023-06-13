@@ -1,0 +1,100 @@
+@import url(reset.css);
+@import url(header.css);
+@import url(form-data/form-data.css);
+@import url(tastes/tastes.css);
+@import url(tastes/tastesAuthors/taste-authors.css);
+@import url(about/about-userText.css);
+@import url(button.css);
+@import url(swicthLang/swicthLang.css);
+@import url(swicthTheme.css);
+
+:root {
+  font-size: 62.5%;
+  font-family: 'Karma', serif;
+} 
+
+*{
+  border-radius: 10px;
+  transition: .2s;
+}
+
+body {
+  background: var(--background);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--black);
+  font-size: 1.2rem;
+  height: 100vh;
+}
+
+body[data-color="light"] {
+  --background: linear-gradient(162.39deg, #FF6FCE , #FFC632);
+  --black: #000000;
+  --borders: #989898;
+  --buttonAndFormBorder: linear-gradient(180deg, #FF3E83, #FF6FCE);
+  --formBody: linear-gradient(180deg, #FFFFFF, #F0F0F0);
+  --inputBackground: #FFC8E6;
+  --textarea: #FC9CCA;
+  --title: linear-gradient(180deg, #7748FC, #FF0000);
+}
+
+body[data-color="dark"] {
+  --background: linear-gradient(162.39deg, #020811, #5A0171);
+  --black: #ffffff;
+  --buttonAndFormBorder: linear-gradient(180deg, #AD5AFF, #0A3FFF); 
+  --borders: #B568F2;
+  --formBody: linear-gradient(180deg, #0A0909, #090909);
+  --inputBackground: #E7DCFF;
+  --textarea: #C4A8FF;
+  --title: linear-gradient(180deg, #0A3FFF, #B568F2);
+}
+
+#form {
+  background: var(--formBody);
+  height: 450px;
+  padding-top: 1.5rem;
+  margin: 2rem auto;
+  text-align: center;
+  width: 250px;
+}
+
+#form::after {
+  background: var(--buttonAndFormBorder);
+  bottom: 46.1rem;
+  border-radius: inherit;
+  content: '';
+  display: block;
+  height: 468px;
+  position: relative;
+  right: 1px;
+  width: calc(100% + 2px);
+  z-index: -2;
+}
+
+input, select {
+  background: var(--inputBackground);
+  border: 2px solid var(--borders);
+}
+
+#checkbox {
+  border: 2px solid var(--borders);
+  border-image: var(--borders) 1;
+}
+
+.title {
+  background: var(--title);
+  background-clip: text;
+  font-size: 1.4rem;
+  margin: .5rem 0 .5rem 0;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.call {
+  margin: 8px auto;
+  text-align: left;
+}
+
+.mainTitle {
+  font-size: 1.8rem;
+}

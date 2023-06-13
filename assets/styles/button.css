@@ -1,0 +1,36 @@
+.button {
+  margin-top: 10px;
+  width: 200px;
+  height: 20px;
+  background: var(--buttonAndFormBorder);
+  border: none;
+}
+
+.button[data-language = 'en']::after {
+  content: 'Submit';
+}
+
+.button[data-language = 'pt-br']::after {
+  content: 'Enviar';
+}
+
+.button::after {
+  background-clip: text;
+  background: var(--buttonAndFormBorder);
+  bottom: 1.6rem;
+  content: 'Submit';
+  position: relative;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.button::before {
+  background: var(--formBody);
+  border-radius: 10px;
+  content: '';
+  display: block;
+  height: 18px;
+  position: relative;
+  right: .5rem;
+  width: 198px;
+}

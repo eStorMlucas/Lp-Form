@@ -1,0 +1,19 @@
+.swicthTheme {
+  background: var(--formBody);
+  border-radius: 50%;
+  border: none;
+  position: relative;
+}
+
+.swicthTheme::after {
+  background: var(--buttonAndFormBorder);
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 46px;
+  position: absolute;
+  right: -2px;
+  top: -2.5px;
+  width: 48px;
+  z-index: -1;
+}

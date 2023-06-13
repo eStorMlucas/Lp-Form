@@ -1,0 +1,5 @@
+.tastes__authorSection {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 25px;
+}

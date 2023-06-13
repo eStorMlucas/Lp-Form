@@ -1,87 +1,128 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300;500;700&display=swap" rel="stylesheet">
-    <title> Lp - Form </title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Lp-Form </title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karma&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles/style.css">
 </head>
-<body>
-    <div class="form-body">
-    <h1 id="presentation__title"> Cadastro de Autores </h1>
-    
-    <form action="">
-        <fieldset>
-            <label for="name"> Nome: </label>
-            <input required type="text" name="name" id="name">
+<body data-color="light">
+  <header class="header">
+    <button class="swicthLang">
+      <p class="swicthLang__text"> Pt-Br </p>
+    </button>
+    <button class="swicthTheme">
+      <img src="/assets/img/moonIcon.svg">
+    </button>
+  </header>
+  <form id="form">
+    <h1 class="mainTitle title"> Author Registration </h1>
 
-            <label for="surname"> Sobrenome: </label>
-            <input required type="text" name="surname" id="surname">
+    <fieldset class="form__data">  
+      <label class="formData__labels" for="name"> Name </label>
+      <input required type="text" name="name" class="form__input">
+      <label class="formData__labels" for="email"> Email </label>
+      <input required type="email" name="email" class="form__input">
+      <label class="formData__labels" for="phone"> Phone </label>
+      <input required type="tel" name="phone" id="phone" placeholder="(##) #####-####">
+      <div class="form__genre">
+        <label class="formData__labels" for="genre"> Genre </label>
+        <input type="radio" name="genre" class="genreOption"> Male
+        <input type="radio" name="genre" class="genreOption"> Female
+        <input type="radio" name="genre" class="genreOption"> Other
+      </div>
+    </fieldset>
 
-            <div class="radios">
-                <label>
-                    <input required type="radio" name="genre" value="masculine"> Masculino
-                </label>
-                <label>
-                    <input type="radio" name="genre" value="feminine"> Feminino
-                </label>
-                <label>
-                    <input type="radio" name="genre" value="N/A"> Prefiro não falar
-                </label>
-            </div>
-        </fieldset>       
-        <fieldset>
-            <label for="email"> Email: </label>
-            <input type="email" name="email" id="email">
-
-            <label for="tel"> Número celular: </label>
-            <input type="tel" pattern="[0-9{2}-0-9{4}0-9]" name="phone" placeholder="42 9999 9999" id="phone" maxlength="10" minlength="10">
-        </fieldset>
-        <div class="interests">
-            <label for="interests"> Qual desses livros você gostou mais? </label>
-            <select required name="interests" id="interests">
-                <option value="" selected disabled> Selecinar </option>
-                <option value="O Grande Rei"> O Grande Rei </option>
-                <option value="Dom Cabote"> Dom Cabote </option>
-                <option value="O Senhor dos Pasteis"> O Senhor dos Pastéis </option>
-                <option value="A Humana Risada"> A Humana Risada </option>
-                <option value="A Leoa o Mago e o Cesto"> A Leoa, o Mago e o Cesto </option>
-                <option value="Sarah no estado da decadencia"> Sarah, no estado da decadência </option>
-                <option value="N/A"> Nenhuma Alternativa </option>
-            </select>
+    <section class="tastes">
+      <h2 class="title secondaryTitle"> Your literary tastes </h2>
+      <div class="tastes__selections">
+        <h3 class="call"> Select your 3 favorites genres </h3>
         
-            <h2 class="title"> Quais desses gêneros você possui interesse? </h2>
-            <div class="checkboxes">
-                <input type="checkbox" name="genre1" id="genre1" value="romance">
-                <label for="genre1"> Romance </label>
-                <input type="checkbox" name="genre2" id="genre2" value="aventura">
-                <label for="genre2"> Aventura </label>
-                <input type="checkbox" name="genre3" id="genre3" value="fantasia">
-                <label for="genre3"> Fantasia </label>
-                <input type="checkbox" name="genre4" id="genre4" value="ficção">
-                <label for="genre4"> Ficção </label>
-                <input type="checkbox" name="genre5" id="genre5" value="distopia">
-                <label for="genre5"> Distopia </label>
-                <input type="checkbox" name="genre6" id="genre6" value="poesia">
-                <label for="genre6"> Poesia </label>
-                <input type="checkbox" name="genre7" id="genre7" value="misterio">
-                <label for="genre7"> Mistério </label>
-            </div>
-        </div>
+        <ul class="tastes__itemList">
+          <li class="tastes__item">
+            <label class="genreNumber" for="tasteSelection"> 1° Genre </label>
+            <select name="tasteSelection" class="tasteSelection">
+              <optgroup>
+                <option value="N/A" selected> Select </option>
+                <option value="Fantasy"> Fantasy </option>
+                <option value="Action"> Action </option>
+                <option value="Adventure"> Adventure </option>
+                <option value="Romance"> Romance </option>
+                <option value="Dark-fantasy"> Dark-fantasy </option>
+                <option value="Mystery"> Mystery </option>
+                <option value="Sci-fi"> Sci-fi </option>
+                <option value="Religion"> Religion </option>
+                <option value="Technical"> Technical </option>
+                <option value="Literature"> Literature </option>
+              </optgroup>
+            </select>
+          </li>
+          <li class="tastes__item">
+            <label class="genreNumber" for="tasteSelection"> 2° Genre </label>
+            <select name="tasteSelection" class="tasteSelection">
+              <optgroup>
+                <option value="N/A" selected> Select </option>
+                <option value="Fantasy"> Fantasy </option>
+                <option value="Action"> Action </option>
+                <option value="Adventure"> Adventure </option>
+                <option value="Romance"> Romance </option>
+                <option value="Dark-fantasy"> Dark-fantasy </option>
+                <option value="Mystery"> Mystery </option>
+                <option value="Sci-fi"> Sci-fi </option>
+                <option value="Religion"> Religion </option>
+                <option value="Technical"> Technical </option>
+                <option value="Literature"> Literature </option>
+              </optgroup>
+            </select>
+          </li>
+          <li class="tastes__item">
+            <label class="genreNumber" for="tasteSelection"> 3° Genre </label>
+            <select name="tasteSelection" class="tasteSelection">
+              <optgroup>
+                <option value="N/A" selected> Select </option>
+                <option value="Fantasy"> Fantasy </option>
+                <option value="Action"> Action </option>
+                <option value="Adventure"> Adventure </option>
+                <option value="Romance"> Romance </option>
+                <option value="Dark-fantasy"> Dark-fantasy </option>
+                <option value="Mystery"> Mystery </option>
+                <option value="Sci-fi"> Sci-fi </option>
+                <option value="Religion"> Religion </option>
+                <option value="Technical"> Technical </option>
+                <option value="Literature"> Literature </option>
+              </optgroup>
+            </select>
+          </li>
+        </ul>
+      </div>
 
-        <div class="personality">
-            <h2 class="title"> Conte mais sobre você </h2>
-            <textarea name="about" id="about">  </textarea>
-        </div>
+      <div class="tastes__authors">
+        <h3 class="call"> Choose authors you've read </h3>
+        <fieldset class="tastes__authorSection">
+          <input type="checkbox" name="author" class="tastes__authorOption"><label for="author"> J.s Newis </label>
+          <input type="checkbox" name="author" class="tastes__authorOption"><label for="author"> Ethan Think </label>
+          <input type="checkbox" name="author" class="tastes__authorOption"><label for="author"> M. Nobato </label>
+          <input type="checkbox" name="author" class="tastes__authorOption"><label for="author"> P. Anieri </label>
+          <input type="checkbox" name="author" class="tastes__authorOption"><label for="author"> V.R.R Phoden </label>
+          <input type="checkbox" name="author" class="tastes__authorOption"><label for="author"> S.Livector </label>
+        </fieldset>
+      </div>      
+    </section>
 
-        <button id="button"> Enviar </button>
-    </form>
-    </div>
-    </main>
-    <script src="assets/js/main.js"></script>
+    <section class="about">
+      <h2 class="title secondaryTitle"> Tell us about yourself </h2>
+      <textarea name="about__userText" id="userText"></textarea>
+    </section>
+    
+    <button class="button" data-language="en-us">
+    </button>
+  </form>
+
 </body>
+<script src="assets/js/swicthLang.js"></script>
+<script src="assets/js/swicthTheme.js"></script>
 </html>
