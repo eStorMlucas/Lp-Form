@@ -44,42 +44,35 @@ function changeLang(language) {
   language === 'en' ? lang = 'english' : lang = 'portuguese'
   
   const mainTitle = document.querySelector('.mainTitle')
-  const optGroup = document.querySelectorAll('optgroup')
-  const labels = document.querySelectorAll('.formData__labels')
   const genres = document.querySelectorAll('.genreOption')
-  const tasteGenreLabels = document.querySelectorAll('.genreNumber')
-  const secondaryTitles = document.querySelectorAll('.secondaryTitle')
-  const calls = document.querySelectorAll('.call')
-
+  
   mainTitle.innerHTML = langs[lang].mainTitle
-
-  optGroup.forEach((group) => {
-    const optionList = group.querySelectorAll('option')
-    
-    for (let i = 0; i < optionList.length; i++) {
-      optionList[i].innerHTML = langs[lang].tasteGenres[i]
-    }
-  })
 
   for (let i = 0; i < genres.length; i++) {
     genres[i].nextSibling.textContent = `${langs[lang].genres[i]}\n`
   };
 
-  for (let i = 0; i < labels.length; i++) {
-    labels[i].innerHTML = langs[lang].labels[i]
-  };
+  const lists = {
+    labels: document.querySelectorAll('.formData__labels'),
+    genres: document.querySelectorAll('.genreOption'),
+    tasteGenreLabels: document.querySelectorAll('.genreNumber'),
+    secondaryTitles: document.querySelectorAll('.secondaryTitle'),
+    calls: document.querySelectorAll('.call')
+  }
+
+  const listsToArray = [ Object.entries(lists) ]
+
+  for (let i = 0; i < listsToArray.length; i++) {
+    listsToArray[i].forEach(lists => {
+      const key = lists[0]
+      const elements = lists[1]
+      const pos = Object.keys(langs[lang]).find((e) => e === key)
+
+      for (let I = 0; I < elements.length; I++){
+        elements[I].innerHTML = langs[lang][pos][I] 
+      }
+    }) 
+  }
   
-  for (let i = 0; i < secondaryTitles.length; i++) {
-    secondaryTitles[i].innerHTML = langs[lang].secondaryTitles[i]
-  }
-
-  for (let i = 0; i < tasteGenreLabels.length; i++) {
-    tasteGenreLabels[i].innerHTML = langs[lang].tasteGenreLabels[i]
-  };
-
-  for (let i = 0; i < calls.length; i++) {
-    calls[i].innerHTML = langs[lang].calls[i]
-  }
-
   document.querySelector('[data-language]').dataset.language = language
 }
