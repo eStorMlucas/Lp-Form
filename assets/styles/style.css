@@ -70,6 +70,12 @@ body[data-color="dark"] {
   z-index: -2;
 }
 
+@media screen and (max-width: 425px) {
+  #form::after {
+    bottom: 46.5rem;
+  }
+}
+
 input, select {
   background: var(--inputBackground);
   border: 2px solid var(--borders);
