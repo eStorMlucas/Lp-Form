@@ -20,3 +20,9 @@
   width: 72px;
   z-index: -1;
 }
+
+@media screen and (max-width: 425px) {
+  .swicthLang::after {
+    bottom: 18px;
+  }
+}
