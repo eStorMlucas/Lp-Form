@@ -72,7 +72,7 @@ body[data-color="dark"] {
 
 @media screen and (max-width: 425px) {
   #form::after {
-    bottom: 46.5rem;
+    bottom: 46.4rem;
   }
 }
 
