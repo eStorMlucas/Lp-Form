@@ -1,11 +1,16 @@
 @import url(swicthLang-text.css);
 
 .swicthLang {
+  color: var(--black);
   background: var(--formBody);
   border: none;
   height: 22px;
   margin-top: 20px;
   width: 70px;
+}
+
+.swicthLang:hover {
+  cursor: pointer;
 }
 
 .swicthLang::after {
@@ -21,8 +26,7 @@
   z-index: -1;
 }
 
-@media screen and (max-width: 425px) {
-  .swicthLang::after {
-    bottom: 18px;
-  }
+.swicthLang:hover::after{ 
+  background: var(--black);
 }
+

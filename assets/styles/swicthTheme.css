@@ -5,6 +5,10 @@
   position: relative;
 }
 
+.swicthTheme:hover{
+  cursor: pointer;
+}
+
 .swicthTheme::after {
   background: var(--buttonAndFormBorder);
   border-radius: 50%;
@@ -16,4 +20,9 @@
   top: -2.5px;
   width: 48px;
   z-index: -1;
+}
+
+.swicthTheme:hover::after{ 
+  background: var(--black);
+  cursor: pointer;
 }

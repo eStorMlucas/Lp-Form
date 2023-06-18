@@ -6,12 +6,32 @@
   border: none;
 }
 
+.button:hover, .button:focus{ 
+  background: var(--black);
+  cursor: pointer;
+}
+
 .button[data-language = 'en']::after {
   content: 'Submit';
 }
 
 .button[data-language = 'pt-br']::after {
   content: 'Enviar';
+}
+
+.button::before {
+  background: var(--formBody);
+  border-radius: 10px;
+  content: '';
+  display: block;
+  height: 18px;
+  position: relative;
+  right: .5rem;
+  width: 198px;
+}
+
+.button:hover::before {
+  background: var(--background);
 }
 
 .button::after {
@@ -24,13 +44,9 @@
   -webkit-background-clip: text;
 }
 
-.button::before {
-  background: var(--formBody);
-  border-radius: 10px;
-  content: '';
-  display: block;
-  height: 18px;
-  position: relative;
-  right: .5rem;
-  width: 198px;
+.button:hover::after, .button:focus::after{
+  background-clip: text;
+  background: var(--black);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }

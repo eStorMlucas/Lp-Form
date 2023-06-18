@@ -35,6 +35,8 @@ body[data-color="light"] {
   --inputBackground: #FFC8E6;
   --textarea: #FC9CCA;
   --title: linear-gradient(180deg, #7748FC, #FF0000);
+  --hoverInput: #fc95d9;
+  --hoverTextArea: #f5bad5;
 }
 
 body[data-color="dark"] {
@@ -44,8 +46,10 @@ body[data-color="dark"] {
   --borders: #B568F2;
   --formBody: linear-gradient(180deg, #0A0909, #090909);
   --inputBackground: #E7DCFF;
-  --textarea: #C4A8FF;
+  --textarea: #c0a8f3;
   --title: linear-gradient(180deg, #0A3FFF, #B568F2);
+  --hoverInput: #58006e; 
+  --hoverTextArea: #d6c8f5;
 }
 
 #form {
@@ -72,13 +76,20 @@ body[data-color="dark"] {
 
 @media screen and (max-width: 425px) {
   #form::after {
-    bottom: 46.4rem;
+    bottom: 46.5rem;
   }
 }
 
 input, select {
   background: var(--inputBackground);
   border: 2px solid var(--borders);
+}
+
+input:hover, input:focus, select:hover, select:focus {
+  background: var(--hoverInput);
+  border: 2px solid var(--black);
+  color: var(--hoverText);
+  cursor: pointer;
 }
 
 #checkbox {

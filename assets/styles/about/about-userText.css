@@ -3,3 +3,8 @@
   height: 90px;
   width: 200px;
 }
+
+#userText:hover, #userText:focus {
+  background: var(--hoverTextArea);
+  border: 1px solid var(--black);
+}
