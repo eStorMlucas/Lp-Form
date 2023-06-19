@@ -31,10 +31,10 @@ langButton.addEventListener('click', () => {
 
   if (HTMLlanguage === 'en') {
     document.documentElement.lang = 'pt-br'
-    buttonText.innerHTML = 'en-us'
+    buttonText.innerHTML = 'En-Us'
   } else {
     document.documentElement.lang = 'en'
-    buttonText.innerHTML = 'pt-br'
+    buttonText.innerHTML = 'Pt-Br'
   }
   changeLang(document.documentElement.lang) 
 })
