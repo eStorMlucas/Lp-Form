@@ -6,7 +6,7 @@
   border: none;
 }
 
-.button:hover, .button:focus{ 
+.button:hover { 
   background: var(--black);
   cursor: pointer;
 }
@@ -44,7 +44,7 @@
   -webkit-background-clip: text;
 }
 
-.button:hover::after, .button:focus::after{
+.button:hover::after {
   background-clip: text;
   background: var(--black);
   -webkit-text-fill-color: transparent;
