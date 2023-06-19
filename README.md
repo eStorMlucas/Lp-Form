@@ -8,7 +8,7 @@ This is an formulary created for one producer and book distributor that wants to
 |--------------|-------------|
 | ![New screenshot1](assets/img/screenshots/screenshotLight.png) | ![New screenshot2](assets/img/screenshots/screenshotDark.png) |
  
-[link figma](https://www.figma.com/file/jBWt7M5HMpfxDoEHQVTeyL/Lp-Form?type=design&node-id=0-1&t=iDTQ3K9CKV2LdNkv-0)
+[link figma](https://www.figma.com/file/jBWt7M5HMpfxDoEHQVTeyL/Lp-Form?type=design&node-id=0%3A1&t=clxKMRs4StB9ZhB1-1)
 
 ## Description
 
